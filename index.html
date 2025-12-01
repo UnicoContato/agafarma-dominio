@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agafarma - Drogaria Cidreira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0038A8', 
+                            light: '#1E5BC6',
+                            dark: '#00257A',
+                        },
+                        secondary: {
+                            DEFAULT: '#FFCC00', 
+                            hover: '#E6B800',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-700 antialiased bg-gray-50">
+
+    <header id="main-header" class="fixed w-full top-0 z-50 bg-white shadow-md transition-transform duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <a href="#" class="text-2xl font-bold text-primary-DEFAULT tracking-tight">
+                AGAFARMA
+                <span class="text-xs block text-gray-500 font-normal">Drogaria Cidreira</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#inicio" class="text-gray-600 hover:text-primary-DEFAULT font-medium transition">Início</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary-DEFAULT font-medium transition">Sobre Nós</a>
+                <a href="#servicos" class="text-gray-600 hover:text-primary-DEFAULT font-medium transition">Serviços</a>
+                <a href="#galeria" class="text-gray-600 hover:text-primary-DEFAULT font-medium transition">Galeria</a>
+                <a href="#contato" class="text-gray-600 hover:text-primary-DEFAULT font-medium transition">Contato</a>
+                
+                <a href="https://wa.me/555136811725" target="_blank" class="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold transition shadow-lg">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <span>Peça pelo WhatsApp</span>
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-primary-DEFAULT focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 flex flex-col space-y-4 shadow-lg">
+            <a href="#inicio" class="text-gray-700 hover:text-primary-DEFAULT font-medium">Início</a>
+            <a href="#sobre" class="text-gray-700 hover:text-primary-DEFAULT font-medium">Sobre Nós</a>
+            <a href="#servicos" class="text-gray-700 hover:text-primary-DEFAULT font-medium">Serviços</a>
+            <a href="#galeria" class="text-gray-700 hover:text-primary-DEFAULT font-medium">Galeria</a>
+            <a href="#contato" class="text-gray-700 hover:text-primary-DEFAULT font-medium">Contato</a>
+            <a href="https://wa.me/555136811725" target="_blank" class="w-full text-center bg-green-500 text-white py-2 rounded font-bold">WhatsApp</a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center bg-gray-900">
+        <div class="absolute inset-0 z-0">
+            <img src="img/1.jpg" alt="Interior da Agafarma" class="w-full h-full object-cover opacity-50">
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight drop-shadow-md">
+                AGAFARMA
+            </h1>
+            <p class="text-xl md:text-2xl text-white font-medium mb-8 drop-shadow-sm">
+                Cuidando de você com carinho e economia!
+            </p>
+            <a href="https://wa.me/555136811725" class="inline-block bg-secondary hover:bg-secondary-hover text-primary-dark font-bold text-lg px-8 py-4 rounded-full transition transform hover:scale-105 shadow-xl">
+                Faça seu Pedido
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center fade-in">
+            <h2 class="text-3xl font-bold text-primary-DEFAULT mb-8 uppercase tracking-wide">Sobre Nós</h2>
+            <div class="text-lg text-gray-600 leading-relaxed space-y-6">
+                <p>
+                    Somos uma farmácia situada em Cidreira-RS, litoral norte gaúcho. Nossa história iniciou em 2008 e desde então prezamos pelo nosso diferencial maior: resolver o problema do nosso cliente. Então não apenas vendemos medicamentos, solucionamos o problema do nosso cliente.
+                </p>
+                <p>
+                    Mantendo sempre um atendimento acolhedor, ágil e diferenciado. Prezamos por trazer para nosso portifólio o que há de mais moderno em medicamentos e perfumaria. Agora em 2025 estamos abrindo uma filial também na cidade de Cidreira, localizada na esquina do Asun supermercados, para que clientes de outros bairros também possam usufruir da experiência que é ser atendido em nossas lojas!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary-DEFAULT mb-12 uppercase tracking-wide">Nossos Departamentos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition fade-in text-center border-b-4 border-primary-DEFAULT">
+                    <svg class="w-16 h-16 text-primary-DEFAULT mx-auto mb-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <g fill="currentColor"> <path fill="none" d="M0 0H24V24H0z" /> <path d="M19 2v2h-2v3c1.657 0 3 1.343 3 3v11c0 .552-.448 1-1 1H5c-.552 0-1-.448-1-1V10c0-1.657 1.343-3 3-3V4H5V2h14zm-2 7H7c-.552 0-1 .448-1 1v10h12V10c0-.552-.448-1-1-1zm-4 2v2h2v2h-2.001L13 17h-2l-.001-2H9v-2h2v-2h2zm2-7H9v3h6V4z" /> </g> </svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Medicamentos</h3>
+                    <p class="text-gray-600">Ampla linha de genéricos, similares e referência com os melhores preços da região.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition fade-in text-center border-b-4 border-secondary-DEFAULT">
+                    <svg class="w-16 h-16 text-primary-DEFAULT mx-auto mb-6" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 442 442" xml:space="preserve"> <g> <path d="M231.5,50.5c0-5.79-4.71-10.5-10.5-10.5c-5.79,0-10.5,4.71-10.5,10.5S215.21,61,221,61C226.79,61,231.5,56.29,231.5,50.5z" /> <path d="M346,163.682h-60V122c0-5.522-4.478-10-10-10h-10V10c0-5.523-4.478-10-10-10h-70c-5.523,0-10,4.477-10,10v102h-10 c-5.523,0-10,4.478-10,10v41.682H96c-11.028,0-20,8.972-20,20V422c0,11.028,8.972,20,20,20h250c11.028,0,20-8.972,20-20V183.682 C366,172.653,357.028,163.682,346,163.682z M196,20h50v92h-50V20z M96,422V183.682h70c5.523,0,10-4.477,10-10V132h35v71.682h-85 c-5.523,0-10,4.478-10,10V392c0,5.522,4.477,10,10,10h190c5.522,0,10-4.478,10-10v-60.892c0-5.522-4.478-10-10-10s-10,4.478-10,10 V382H136V223.682h75V352c0,5.522,4.477,10,10,10c5.523,0,10-4.478,10-10V223.682h75V297c0,5.522,4.478,10,10,10s10-4.478,10-10 v-83.318c0-5.522-4.478-10-10-10h-85V132h35v41.682c0,5.523,4.478,10,10,10h70L346.002,422H96z" /> </g> </svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Perfumaria e Higiene</h3>
+                    <p class="text-gray-600">Cosméticos, dermocosméticos e produtos de higiene pessoal das melhores marcas.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition fade-in text-center border-b-4 border-primary-DEFAULT">
+                    <svg class="w-16 h-16 text-primary-DEFAULT mx-auto mb-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M19 2C19 2 21 3.2 21 6C21 8.8 19 10 19 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M17 4C17 4 18 4.6 18 6C18 7.4 17 8 17 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M17.9975 18C18 17.8358 18 17.669 18 17.5C18 15.0147 14.4183 13 10 13C5.58172 13 2 15.0147 2 17.5C2 19.9853 2 22 10 22C12.231 22 13.8398 21.8433 15 21.5634" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Atenção Farmacêutica</h3>
+                    <p class="text-gray-600">Atendimento acolhedor e profissional para tirar suas dúvidas e cuidar da sua saúde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary-DEFAULT mb-12 uppercase tracking-wide">Conheça Nossa Loja</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg h-64 fade-in">
+                    <img src="img/3.jpg" alt="Fachada da Loja" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg h-64 fade-in">
+                    <img src="img/2.jpg" alt="Interior da Loja Corredores" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg h-64 fade-in">
+                    <img src="img/4.jpg" alt="Seção Infantil" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg h-64 fade-in">
+                    <img src="img/5.jpg" alt="Seção de Absorventes" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                </div>
+                 <div class="overflow-hidden rounded-lg shadow-lg h-64 fade-in md:col-span-2 lg:col-span-2">
+                    <img src="img/1.jpg" alt="Visão Geral" class="w-full h-full object-cover transform hover:scale-110 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="bg-gray-100">
+        <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 p-10 lg:p-20 flex flex-col justify-center bg-white shadow-inner">
+                <div class="max-w-md mx-auto w-full fade-in">
+                    <h2 class="text-3xl font-bold text-primary-DEFAULT mb-8 border-l-4 border-secondary-DEFAULT pl-4">Localização e Contato</h2>
+                    
+                    <div class="space-y-6 text-gray-700">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Empresa</p>
+                            <p class="font-semibold text-lg">ROSARIO & CARRARD LTDA</p>
+                            <p class="text-gray-600">CNPJ: 09.619.084/0001-10</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Endereço</p>
+                            <p class="font-medium">Av. Mostardeiro, 3404</p>
+                            <p>Centro - Cidreira / RS</p>
+                            <p>CEP: 95.595-000</p>
+                        </div>
+
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Contato</p>
+                            <p class="font-medium flex items-center gap-2">
+                                <svg class="w-5 h-5 text-primary-DEFAULT" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                (51) 3681-1725
+                            </p>
+                            <p class="font-medium flex items-center gap-2 mt-2">
+                                <svg class="w-5 h-5 text-primary-DEFAULT" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                AGA583@AGAFARMA.COM.BR
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 h-[500px] lg:h-auto bg-gray-300">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.864384950346!2d-50.2078!3d-30.1706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDEwJzE0LjIiUyA1MMKwMTInMjguMSJX!5e0!3m2!1spt-BR!2sbr!4v1630000000000!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2 font-semibold">AGAFARMA - Drogaria Cidreira</p>
+            <p class="text-sm text-gray-300 mb-4">&copy; 2025 Rosário & Carrard Ltda. Todos os direitos reservados.</p>
+            <button id="privacy-btn" class="text-xs text-gray-400 hover:text-white underline">Política de Privacidade</button>
+        </div>
+    </footer>
+
+    <div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-70 z-[60] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Política de Privacidade</h3>
+            <div class="prose text-gray-600 text-sm">
+                <p class="mb-2">A Rosário & Carrard Ltda ("Agafarma Cidreira") respeita a sua privacidade. Este site tem caráter meramente informativo e institucional.</p>
+                <p class="mb-2"><strong>Coleta de Dados:</strong> Não coletamos dados pessoais sensíveis através deste site. As interações via WhatsApp são regidas pelos termos de privacidade da própria plataforma WhatsApp.</p>
+                <p class="mb-2"><strong>Cookies:</strong> Este site pode utilizar cookies essenciais apenas para garantir o funcionamento técnico e desempenho da página.</p>
+                <p>Para mais informações sobre como tratamos seus dados em loja física, por favor, consulte o gerente farmacêutico disponível no local.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
